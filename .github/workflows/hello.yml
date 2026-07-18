@@ -10,3 +10,7 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "Hello World!"
+      - name: Get Current Date
+        run: date
+      - name: Show Current Directory Contents
+        run: ls -l
