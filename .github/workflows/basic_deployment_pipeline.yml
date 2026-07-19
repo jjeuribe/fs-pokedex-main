@@ -1,0 +1,12 @@
+name: basic_deployment_pipeline
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deployment_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Show Current Directory Contents
+        run: ls -l
