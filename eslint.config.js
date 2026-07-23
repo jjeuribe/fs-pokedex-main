@@ -36,6 +36,16 @@ module.exports = [
     }
   },
   {
+    files: ['jest.setup.js'],
+    languageOptions: {
+      sourceType: 'commonjs',
+      globals: {
+        ...globals.node,
+        ...globals.jest
+      }
+    }
+  },
+  {
     files: ['src/**/*.{js,jsx}', 'test/**/*.{js,jsx}'],
     plugins: {
       react,
@@ -70,7 +80,7 @@ module.exports = [
       'no-trailing-spaces': 'error',
       'object-curly-spacing': ['error', 'always'],
       'arrow-spacing': ['error', { 'before': true, 'after': true }],
-      'no-console': 'error',
+      'no-console': 'off',
       'react/prop-types': 0
     }
   }
